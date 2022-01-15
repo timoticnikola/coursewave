@@ -341,7 +341,7 @@ img {
 
 #courses {
   min-height: 100vh;
-  background-image: url("../img/category.svg");
+  background-image: url("../img/category-background.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -444,6 +444,7 @@ img {
   min-height: 100vh;
   /* margin-top: 50px; */
   padding-top: 100px;
+  background-color: var(--primary);
   /* background-image: url("../img/about-us-background.svg"); */
   /* background-image: url("../img/Artboard\ 1.svg");
   background-position: center;
@@ -483,6 +484,8 @@ img {
 }
 #about-us-left img {
   object-fit: cover;
+  border: 5px solid rebeccapurple;
+  border-radius: 25px 10px 5029px 7px;
 }
 
 /* Contact */
@@ -492,11 +495,14 @@ textarea {
 }
 
 #contact {
-  background-color: #5384f7;
   padding: 50px 0;
   display: flex;
   justify-content: center;
   height: 100vh;
+  background-image: url("../img/contact-us-background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #contact .wrapper {
   display: flex;
