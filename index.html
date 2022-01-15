@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/334a554198.js" crossorigin="anonymous"></script>
+    <title>CourseWave | Tutorials</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <nav id="navbar"></nav>
+    <header id="header">
+      <div class="wrapper">
+        <div id="header-left">
+          <h1>Chose your path!</h1>
+          <p>Build new skills with our courses, earn certificates, and get degrees from top class school.</h2>
+          <a href="#">Check our courses</a>
+        </div>
+        <div id="header-right">
+          <!-- <i class="fas fa-code"></i> -->
+          <img src="assets/img/programming.svg" alt="" srcset="" />
+        </div>
+      </div>
+    </header>
+    <section id="courses">
+      <div class="wrapper">
+        <h2>Category</h2>
+        <div>
+          <ul>
+            <li class="filter-list filter-list-active" data-filter="all">All</li>
+            <li class="filter-list" data-filter="web">Web</li>
+            <li class="filter-list" data-filter="c">C</li>
+            <li class="filter-list" data-filter="php">PHP</li>
+          </ul>
+        </div>
+        <div id="sale"></div>
+        <div id="category-list"></div>
+      </div>
+    </section>
+    <section id="about-us">
+      <div class="wrapper">
+        <h2>About us</h2>
+        <div id="about-us-container">
+          <div id="about-us-left">
+            <img src="assets/img/colleagues-giving-fist-bump.jpg" alt="company-meeting">
+          </div>
+          <div id="about-us-right">
+            <p>We are a relatively new company with lots of professional people witch want to help new young people to develop new skills.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="wrapper">
+        <div id="contact-left">
+          <h2>Contact</h2>
+        </div>
+        <div id="contact-right">
+          <form>
+            <div id="form-top">
+              <div class="label-container">
+                <label for="fullName">First Name:</label>
+                <input type="text" name="fullName" id="fullName" placeholder="eg. John Smith" />
+                <p></p>
+              </div>
+              <div class="label-container">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" placeholder="eg. johnsmith@mail.com" />
+                <p></p>
+              </div>
+            </div>
+            <div id="form-middle">
+              <div class="label-container">
+                <label for="destination">Course:</label>
+                <select id="destination" name="destination">
+                  <option value="blank">Select your Course</option>
+                  <option value="serbia">Serbia</option>
+                  <option value="croatia">Croatia</option>
+                  <option value="montenegro">Montenegro</option>
+                </select>
+              </div>
+              <div class="label-container">
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" placeholder="Do you have some aditional questions?"></textarea>
+                <p></p>
+              </div>
+            </div>
+            <div id="form-bottom">
+              <input type="checkbox" name="newslist" id="newslist" />
+              <label for="newslist">Subscribe to our newslist?</label>
+              <div class="button-container">
+                <input class="btn-primary" type="button" value="Send" id="contact-submit" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="logo-sponsors">
+      <div class="sponsor-item">
+        <a href="https://www.microsoft.com/">
+          <i class="fab fa-microsoft"></i>
+        </a>
+      </div>
+      <div class="sponsor-item">
+        <a href="https://github.com/">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="sponsor-item">
+        <a href="https://discord.com/">
+          <i class="fab fa-discord"></i>
+        </a>
+      </div>
+      <div class="sponsor-item">
+        <a href="https://slack.com/">
+          <i class="fab fa-slack"></i>
+        </a>
+      </div>
+    </section>
+    <section id="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15831031455!2d-74.1197631146707!3d40.69766374818676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2srs!4v1640634011766!5m2!1sen!2srs" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    <section id="about-me-container">
+      <div id="about-me">
+        <div id="about-me-left">
+          <img src="assets/img/nikola-timotic.png" alt="profile-img" />
+          <div id="about-me-info">
+            <ul id="about-me-info-content">
+              <li>
+                <p>Mail:
+                  <a href="mailto:nt&#46;timotic&#64;gmail&#46;com">nt&#46;timotic&#64;gmail&#46;com</a>
+                  <!-- <a href="mailto:">nikola&#46;timotic&#46;173&#46;20&#64;ict&#46;eud&#46;rs</a> -->
+                </p>
+              </li>
+              <li>
+                <p>Phone:
+                <a href="tel:060-123-4567">0601234567</a>
+                </p>
+              </li>
+              <li>
+                <p>Index: <span>173/20</span></p>
+              </li>
+            </ul>
+            <ul id="about-social">
+              <li>
+                <a href="#">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-instagram-square"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="about-me-right">
+          <h2>About Me</h2>
+          <p id="about-me-text">Hi, my name is Nikola. I’m a Web Developer located in Serbia. I have a passion for UI and UX design. I'm quietly confident, naturally curious, and perpetually working on improving my chops one design problem at a time. I'm a very well-organized person and problem solver.</p>
+          <div id="quote-box">
+            <cite id="quote"></cite>
+            <p id="author"></p>
+          </div>
+        </div>
+        <div id="about-me-close">
+          <div class="close cross" id="about-me-exit"></div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="wrapper">
+        <div id="footer-up">
+          <div id="footer-social">
+            <p>Social</p>
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-instagram-square"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div id="footer-navigation">
+            <p>Navigation</p>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Courses</a>
+              </li>
+              <li>
+                <a href="#">Learning path</a>
+              </li>
+              <li>
+                <a href="#">Contact us</a>
+              </li>
+              <li>
+                <a href="#">About us</a>
+              </li>
+              <li>
+                <a href="#">About me</a>
+              </li>
+            </ul>
+          </div>
+          <div id="footer-link">
+            <p>Links</p>
+            <ul>
+              <li>
+                <a href="#">Robots</a>
+              </li>
+              <li>
+                <a href="#">RSS</a>
+              </li>
+              <li>
+                <a href="#">Documentation</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="footer-down">
+          <p>&copy; Copyright 2021</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
+</html>
