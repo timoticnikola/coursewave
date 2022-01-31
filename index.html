@@ -9,8 +9,9 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <script src="https://kit.fontawesome.com/334a554198.js" crossorigin="anonymous"></script>
     <title>CourseWave | Tutorials</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="Web, Graphic, Course, programming, certificates, professional" />
   </head>
   <body>
     <nav id="navbar"></nav>
@@ -19,10 +20,9 @@
         <div id="header-left">
           <h1>Chose your path!</h1>
           <p>Build new skills with our courses, earn certificates, and get degrees from top class school.</h2>
-          <a href="#">Check our courses</a>
+          <a href="#courses">Check our courses</a>
         </div>
         <div id="header-right">
-          <!-- <i class="fas fa-code"></i> -->
           <img src="assets/img/programming.svg" alt="" srcset="" />
         </div>
       </div>
@@ -33,9 +33,9 @@
         <div>
           <ul>
             <li class="filter-list filter-list-active" data-filter="all">All</li>
-            <li class="filter-list" data-filter="web">Web</li>
-            <li class="filter-list" data-filter="c">C</li>
-            <li class="filter-list" data-filter="php">PHP</li>
+            <li class="filter-list" data-filter="web">Web programming</li>
+            <li class="filter-list" data-filter="design">Graphic Design</li>
+            <li class="filter-list" data-filter="video">Video Production</li>
           </ul>
         </div>
         <div id="sale"></div>
@@ -75,13 +75,16 @@
               </div>
             </div>
             <div id="form-middle">
-              <div class="label-container">
-                <label for="destination">Course:</label>
-                <select id="destination" name="destination">
+              <div class="label-container">s
+                <label for="courseChose">Course:</label>
+                <select id="courseChose" name="courseChose">
                   <option value="blank">Select your Course</option>
-                  <option value="serbia">Serbia</option>
-                  <option value="croatia">Croatia</option>
-                  <option value="montenegro">Montenegro</option>
+                  <option value="web1">Web programming Basic</option>
+                  <option value="web2">Web programming Advance</option>
+                  <option value="graphic1">Graphic Design Basic</option>
+                  <option value="graphic2">Graphic Design Advance</option>
+                  <option value="video1">Video Production Basic</option>
+                  <option value="video2">Video Production Advance</option>
                 </select>
               </div>
               <div class="label-container">
@@ -229,7 +232,7 @@
             <p>Links</p>
             <ul>
               <li>
-                <a href="#">Robots</a>
+                <a href="robots.txt">Robots</a>
               </li>
               <li>
                 <a href="#">RSS</a>

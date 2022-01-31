@@ -170,7 +170,7 @@ contactSubmit.addEventListener("click", () => {
     mailField.nextElementSibling.innerHTML = "E-mail is not as expected!";
     mailField.nextElementSibling.setAttribute("class", "bad-form-element");
   }
-  let destination = document.getElementById("destination");
+  let destination = document.getElementById("courseChose");
   if (destination.value == "blank") {
     destination.nextElementSibling.innerHTML = "Chose your destination!";
   } else {
@@ -313,23 +313,23 @@ for (let list of filterList) {
           i.style.display = "block";
         }
       }
-    } else if (list.dataset.filter == 'c') {
+    } else if (list.dataset.filter == 'design') {
       temp.classList.remove("filter-list-active");
       list.classList.add("filter-list-active");
       temp = list;
       for (let i of filterItems) {
         i.style.display = "none";
-        if (i.dataset.filter == 'c') {
+        if (i.dataset.filter == 'design') {
           i.style.display = "block";
         }
       }
-    } else if (list.dataset.filter == 'php') {
+    } else if (list.dataset.filter == 'video') {
       temp.classList.remove("filter-list-active");
       list.classList.add("filter-list-active");
       temp = list;
       for (let i of filterItems) {
         i.style.display = "none";
-        if (i.dataset.filter == 'php') {
+        if (i.dataset.filter == 'video') {
           i.style.display = "block";
         }
       }

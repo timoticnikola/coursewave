@@ -322,7 +322,7 @@ img {
   width: 100%;
   text-align: center;
   padding: 20px;
-  pointer-events: all;
+  /* pointer-events: all; */
 }
 .price-text {
   font-weight: 600;
