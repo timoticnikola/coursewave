@@ -147,6 +147,9 @@ img {
 #header {
   min-height: 100vh;
   background-image: url("../img/header-graphic.svg");
+  background-position: center;
+  /* background-position: left; */
+  background-repeat: no-repeat;
   background-size: cover;
 }
 #header .wrapper {
@@ -208,7 +211,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 50px 0 150px 0;
+  /* padding: 50px 0 150px 0; */
   row-gap: 50px;
 }
 
@@ -341,13 +344,15 @@ img {
 
 #courses {
   min-height: 100vh;
-  background-image: url("../img/category-background.svg");
+  background-image: url("../img/category-bg.svg");
   background-position: center;
+  /* background-position: left; */
   background-repeat: no-repeat;
   background-size: cover;
 }
 #courses .wrapper ul {
   display: flex;
+  margin-bottom: 20px;
 }
 #courses .wrapper ul li {
   margin: 25px 20px 0 0;
@@ -366,7 +371,7 @@ img {
   background-color: rgb(56, 56, 56);
 }
 #courses .wrapper > h2 {
-  padding-top: 50px;
+  /* padding-top: 50px; */
   font-size: 2.5rem;
   position: relative;
   display: inline-block;
@@ -443,13 +448,14 @@ img {
 #about-us {
   min-height: 100vh;
   /* margin-top: 50px; */
-  padding-top: 100px;
-  background-color: var(--primary);
-  /* background-image: url("../img/about-us-background.svg"); */
-  /* background-image: url("../img/Artboard\ 1.svg");
+  /* padding-top: 100px; */
+
+  background-image: url("../img/about-us-bg.svg");
+
   background-position: center;
+  /* background-position: left; */
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
 }
 #about-us .wrapper {
   z-index: 5;
@@ -458,7 +464,7 @@ img {
   display: inline-block;
   font-size: 2.5rem;
   position: relative;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 #about-us .wrapper h2::after {
   content: "";
@@ -478,7 +484,7 @@ img {
 }
 #about-us-left,
 #about-us-right {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* background-color: rebeccapurple; */
   width: 50%;
 }
@@ -495,12 +501,14 @@ textarea {
 }
 
 #contact {
-  padding: 50px 0;
+  /* padding: 50px 0; */
   display: flex;
   justify-content: center;
   height: 100vh;
-  background-image: url("../img/contact-us-background.svg");
+  /* background-image: url("../img/contact-us-background.svg"); */
+  background-image: url("../img/contact-us-bg.svg");
   background-position: center;
+  /* background-position: left; */
   background-repeat: no-repeat;
   background-size: cover;
 }
