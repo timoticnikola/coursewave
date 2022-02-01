@@ -391,3 +391,17 @@ if (currentDate < countDiscountTimer) {
 }
 
 // Add event listener
+
+var buyNow = document.querySelectorAll(".buy-now");
+console.log(buyNow);
+// buyNow.addEventListener("click", () => {
+//   console.log(1);
+// });
+
+// for (let i = 0; i < buyNow.length; i++) {
+//   buyNow[i].addEventListener("click", function () {
+//     console.log(buyNow[i]);
+//   });
+// }
+
+// Problem pravi "pointer-events:none;" 
