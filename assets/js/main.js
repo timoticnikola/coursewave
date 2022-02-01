@@ -279,6 +279,9 @@ for (let x of categoryItems) {
   priceContainer.appendChild(priceCurency);
   let courseAButton = document.createElement("a");
   courseAButton.setAttribute("href", "#contact");
+  // 
+  courseAButton.setAttribute("class", "buy-now");
+  // 
   let courseAButtonText = document.createTextNode("Buy");
   courseAButton.appendChild(courseAButtonText);
   categoryInfo.appendChild(priceContainer);
@@ -383,4 +386,5 @@ if (currentDate < countDiscountTimer) {
   }
   var discountInterval = setInterval(discountTimer, 1000);
 }
-// else {}
+
+// Add event listener
