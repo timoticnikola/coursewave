@@ -94,6 +94,7 @@ aboutMeModal.addEventListener("click", () => {
     quoteGeneratorInterval = setInterval(quoteGenerator, 2000);
   }
 });
+// Quote list 
 var quoteList = [
   {
     quote: '"Knowledge is power."',
@@ -120,7 +121,7 @@ var quoteList = [
     author: "Ralph Johnson",
   },
 ];
-
+// Quote generator
 var random1;
 var random2;
 
@@ -179,7 +180,6 @@ contactSubmit.addEventListener("click", () => {
   } else {
     course.nextElementSibling.innerHTML = "It's ok!";
   }
-
   let messageBox = document.getElementById("message");
   if (messageBox.value.length > 450) {
     mailField.nextElementSibling.innerHTML = "Text can't be longer than 450 characters!";
