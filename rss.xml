@@ -1,53 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-        <title>DigitalBlue | WebHosting</title>
-        <link>https://timoticnikola.github.io/digitalblue/index.html</link>
-        <description>DigitalBlue Hosting</description>
+        <title>CourseWave | Learning platform</title>
+        <link>https://timoticnikola.github.io/coursewave</link>
+        <description>Learning platform</description>
         <language>en</language>
-        <copyright>Copyright 2021 DigitalBlue</copyright>
-        <category>Hosting</category>
+        <copyright>Copyright 2022 Nikola Timotic</copyright>
+        <category>Learning</category>
         <image>
-            <url>https://timoticnikola.github.io/assets/img/logo.png</url>
-            <title>DigitalBlue | WebHosting</title>
-            <link>https://timoticnikola.github.io/digitalblue/index.html</link>
+            <url>https://timoticnikola.github.io/coursewave/assets/img/logo-rss.png</url>
+            <title>CourseWave | Learning platform</title>
+            <link>https://timoticnikola.github.io/coursewave/</link>
         </image>
         <item>
-            <title>CPU upgrade</title>
-            <link>https://timoticnikola.github.io/digitalblue/pages/news.html</link>
-            <description>We have upgraded the processor to new Xeon, Ryzen 9, and Threadripper processors.</description>
-            <pubDate>Mon, 29 Mar 2021 16:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>New location</title>
-            <link>https://timoticnikola.github.io/digitalblue/pages/news.html</link>
-            <description>Now we have our servers in three new locations in Germany.</description>
-            <pubDate>Mon, 29 Mar 2021 14:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>New location</title>
-            <link>https://timoticnikola.github.io/digitalblue/pages/news.html</link>
-            <description>Now we have our servers in two new locations in Romania.</description>
-            <pubDate>Tue, 16 Mar 2021 14:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>New payment method</title>
-            <link>https://timoticnikola.github.io/digitalblue/pages/news.html</link>
-            <description>We added more payment methods. Now you can pay for monthly plans with Bitcoin and Ethereum.</description>
-            <pubDate>Mon, 15 Mar 2021 14:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>Network speed and bandwidth upgrade</title>
-            <link>https://timoticnikola.github.io/digitalblue/pages/news.htmll</link>
-            <description>All plans have increased bandwidth and internet speed.</description>
-            <pubDate>Mon, 15 Feb 2021 13:00:00 +0000</pubDate>
-        </item>
-        <item>
-            <title>New Year Sales</title>
-            <link>https://timoticnikola.github.io/digitalblue/pages/news.htmll</link>
-            <description>New Year's discount. 30% discount on the selected plan on the annual bill.</description>
-            <pubDate>Fri, 1 Jan 2021 13:00:00 +0000</pubDate>
+            <title>CourseWave</title>
+            <link>https://timoticnikola.github.io/</link>
+            <description>CourseWave is online learnig platform.</description>
+            <pubDate>Thu, 03 Feb 2022 00:08:00 +0000</pubDate>
         </item>
     </channel>
 </rss>
-Copied
