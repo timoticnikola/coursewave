@@ -345,7 +345,7 @@ for (let list of filterList) {
 
 // Discount
 
-const countDiscountTimer = new Date("Jan 20, 2022 11:38:59").getTime();
+const countDiscountTimer = new Date("Feb 31, 2022 11:38:59").getTime();
 const currentDate = new Date().getTime();
 
 const discountTimer = () => {
@@ -392,8 +392,8 @@ if (currentDate < countDiscountTimer) {
 
 // Add event listener
 
-var buyNow = document.querySelectorAll(".buy-now");
-console.log(buyNow);
+// var buyNow = document.querySelectorAll(".buy-now");
+// console.log(buyNow);
 // buyNow.addEventListener("click", () => {
 //   console.log(1);
 // });
