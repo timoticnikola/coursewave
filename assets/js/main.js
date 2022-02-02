@@ -173,11 +173,11 @@ contactSubmit.addEventListener("click", () => {
     mailField.nextElementSibling.innerHTML = "E-mail is not as expected!";
     mailField.nextElementSibling.setAttribute("class", "bad-form-element");
   }
-  let destination = document.getElementById("courseChose");
-  if (destination.value == "blank") {
-    destination.nextElementSibling.innerHTML = "Chose your destination!";
+  let course = document.getElementById("courseChose");
+  if (course.value == "blank") {
+    course.nextElementSibling.innerHTML = "Chose your course!";
   } else {
-    destination.nextElementSibling.innerHTML = "It's ok!";
+    course.nextElementSibling.innerHTML = "It's ok!";
   }
 
   let messageBox = document.getElementById("message");
