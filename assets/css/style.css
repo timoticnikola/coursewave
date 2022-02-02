@@ -1059,6 +1059,26 @@ textarea {
   .feature-item {
     width: 50%;
   }
+  /* About me */
+  #about-me-container {
+    left: 5vw;
+  }
+  #about-me {
+    max-height: unset;
+    width: 90vw;
+  }
+  #about-me-right {
+    padding: 20px;
+  }
+  #about-me-right h2 {
+    font-size: 1.5rem;
+  }
+  #about-me-text {
+    font-size: 1.1rem;
+  }
+  #quote {
+    font-size: 1rem;
+  }
   /* Footer */
   #footer-up {
     flex-wrap: wrap;
