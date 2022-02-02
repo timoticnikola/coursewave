@@ -682,8 +682,7 @@ textarea {
   margin: 0 auto;
 }
 .sponsor-item a {
-  font-size: 4rem;
-  color: #4361f6;
+  color: var(--primary);
 }
 .sponsor-item i {
   font-size: 7rem;
@@ -743,7 +742,8 @@ textarea {
 }
 
 #footer-up #footer-social ul a,
-#footer-up #footer-navigation ul a {
+#footer-up #footer-navigation ul a,
+#footer-up #footer-link ul a {
   color: #f2f2f2;
 }
 #footer-up #footer-social ul {
@@ -777,6 +777,9 @@ textarea {
   justify-content: center;
   padding: 20px 0;
   font-size: 1.3rem;
+}
+#footer-down p {
+  color: gray;
 }
 /* About me */
 #about-me-container {
@@ -1116,5 +1119,8 @@ textarea {
   }
   #quote-box {
     padding-top: 20px;
+  }
+  .sponsor-item i {
+    font-size: 5rem;
   }
 }
