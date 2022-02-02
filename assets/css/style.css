@@ -496,6 +496,7 @@ img {
   color: #f2f2f2;
   padding: 20px 20px;
   background-color: var(--primary);
+  border-radius: 20%;
 }
 
 #features {
@@ -1030,6 +1031,13 @@ textarea {
     min-width: 250px;
   }
 
+  /* About us */
+  #about-us {
+    background-position: right;
+  }
+  #about-us-right p {
+    padding: 20px 0 50px 20px;
+  }
   /* Contact */
   #contact {
     padding: 50px 0;
