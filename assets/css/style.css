@@ -1107,4 +1107,14 @@ textarea {
   #contact-right {
     padding: 30px;
   }
+  #about-me {
+    flex-direction: column-reverse;
+  }
+  #about-me-left {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #quote-box {
+    padding-top: 20px;
+  }
 }
