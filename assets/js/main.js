@@ -1,8 +1,24 @@
-// NavBar
-
+// NavBar links and names
 let navLinks = ["#header", "#courses", "#about-us", "#contact", "#about-me"];
 let navNames = ["Home", "Courses", "About us", "Contact", "About me"];
 
+// Create links function
+function createLinks(linkArray, nameArray, elementName) {
+  for (const link in linkArray) {
+    let createLiTemp = document.createElement("li");
+    let createATemp = document.createElement("a");
+    createATemp.setAttribute("href", linkArray[link]);
+    if (linkArray[link] == "#about-me") {
+      createATemp.setAttribute("class", "about-me-link");
+    }
+    let createATempContent = document.createTextNode(nameArray[link]);
+    createATemp.appendChild(createATempContent);
+    createLiTemp.appendChild(createATemp);
+    elementName.appendChild(createLiTemp);
+  }
+}
+
+// Navbar
 let navbar = document.getElementById("navbar");
 let navbarContent = document.createElement("div");
 navbarContent.setAttribute("class", "wrapper");
@@ -19,19 +35,7 @@ let navbarUlList = document.createElement("ul");
 navbarUlList.setAttribute("id", "navbar-container");
 navbarUlList.setAttribute("class", "navbar-list");
 navbarContent.appendChild(navbarUlList);
-for (const number in navLinks) {
-  let navLiTemp = document.createElement("li");
-  let navATemp = document.createElement("a");
-  navATemp.setAttribute("href", navLinks[number]);
-  if (number == 4) {
-    navATemp.setAttribute("class", "about-me-link");
-    // navATemp.setAttribute("id", "about-me-link");
-  }
-  let navATempContent = document.createTextNode(navNames[number]);
-  navATemp.appendChild(navATempContent);
-  navLiTemp.appendChild(navATemp);
-  navbarUlList.appendChild(navLiTemp);
-}
+createLinks(navLinks, navNames, navbarUlList);
 let navbarCloseContainer = document.createElement("div");
 navbarCloseContainer.setAttribute("id", "nav-close-container");
 let navbarClose = document.createElement("div");
@@ -46,10 +50,7 @@ arrow.setAttribute("class", "arrow");
 arrowContainer.appendChild(arrow);
 navbar.appendChild(arrowContainer);
 
-
-
-// JQuery Scroll with Scroll To Top
-
+// JQuery set sticky navbar
 $(window).scroll(function () {
   if ($(this).scrollTop()) {
     $("#navbar").addClass("sticky-navbar");
@@ -60,8 +61,20 @@ $(window).scroll(function () {
   }
 });
 
+// JQuery Scroll with Scroll To Top
 $("#arrow-container").click(function () {
   $("html, body").animate({ scrollTop: 0 }, 500);
+});
+
+// Slick - JQuery plugin
+$("#logo-sponsors").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  infinite: true,
+  arrows: false,
+  dots: false
 });
 
 // Burger menu
@@ -72,9 +85,7 @@ burger.addEventListener("click", () => {
 });
 
 // About me
-
 let aboutMeExit = document.getElementById("about-me-close");
-
 aboutMeExit.addEventListener("click", removeAboutMe);
 let aboutMeModalRemoved = true;
 function removeAboutMe() {
@@ -82,7 +93,6 @@ function removeAboutMe() {
   aboutMeModalRemoved = true;
   clearInterval(quoteGeneratorInterval);
 }
-// var aboutMeModal = document.getElementById("about-me-link");
 var aboutMeModal = document.querySelectorAll(".about-me-link");
 aboutMeModal.forEach(item => item.addEventListener("click", () => {
   document.getElementById("about-me-container").style.display = "block";
@@ -138,26 +148,14 @@ function quoteGenerator() {
   }
 }
 
-// Slick - JQuery plugin
-$("#logo-sponsors").slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  infinite: true,
-  arrows: false,
-  dots: false
-});
-
 // Contact form
-
 let contactSubmit = document.getElementById("contact-submit");
 contactSubmit.addEventListener("click", () => {
   let regularFullName = /^[A-ZČĆŽĐŠ][a-zćčžđš]{1,14}\s([A-ZČĆŽĐŠ][a-zćčžđš]{1,14})?\s?[A-ZČĆŽŠĐ][a-zćčžđš]{1,19}$/;
   let fullNameField = document.getElementById("fullName");
   let fullNameFieldValue = fullNameField.value;
   if (regularFullName.test(fullNameFieldValue)) {
-    fullNameField.nextElementSibling.innerHTML = "It's ok!";
+    fullNameField.nextElementSibling.innerHTML = "";
     fullNameField.nextElementSibling.setAttribute("class", "good-form-element");
   } else {
     fullNameField.nextElementSibling.innerHTML = "Full Name is not as expected";
@@ -167,7 +165,7 @@ contactSubmit.addEventListener("click", () => {
   let mailField = document.getElementById("email");
   let mailFieldFieldValue = mailField.value;
   if (regularMail.test(mailFieldFieldValue)) {
-    mailField.nextElementSibling.innerHTML = "It's ok!";
+    mailField.nextElementSibling.innerHTML = "";
     mailField.nextElementSibling.setAttribute("class", "good-form-element");
   } else {
     mailField.nextElementSibling.innerHTML = "E-mail is not as expected!";
@@ -176,21 +174,25 @@ contactSubmit.addEventListener("click", () => {
   let course = document.getElementById("courseChose");
   if (course.value == "blank") {
     course.nextElementSibling.innerHTML = "Chose your course!";
+    course.nextElementSibling.setAttribute("class", "bad-form-element");
   } else {
-    course.nextElementSibling.innerHTML = "It's ok!";
+    course.nextElementSibling.innerHTML = "";
+    course.nextElementSibling.setAttribute("class", "good-form-element");
   }
   let messageBox = document.getElementById("message");
   if (messageBox.value.length > 450) {
-    mailField.nextElementSibling.innerHTML = "Text can't be longer than 450 characters!";
+    messageBox.nextElementSibling.innerHTML = "Message can't be longer than 450 characters!";
+    messageBox.nextElementSibling.setAttribute("class", "bad-form-element");
   } else if (messageBox.value == "" || messageBox.value == null || messageBox.value.length == 0) {
-    mailField.nextElementSibling.innerHTML = "Don't leave this empty!";
+    messageBox.nextElementSibling.innerHTML = "Message can't be empty!";
+    messageBox.nextElementSibling.setAttribute("class", "bad-form-element");
   } else {
-    mailField.nextElementSibling.innerHTML = "It's ok!";
+    messageBox.nextElementSibling.innerHTML = "";
+    messageBox.nextElementSibling.setAttribute("class", "good-form-element");
   }
 });
 
-// Courses
-
+// Courses list
 let categoryList = document.getElementById("category-list");
 const categoryItems = [
   {
@@ -243,6 +245,7 @@ const categoryItems = [
   }
 ];
 
+// Course items
 for (let x of categoryItems) {
   let categoryInfoBox = document.createElement("div");
   categoryInfoBox.setAttribute("data-filter", x.dataFilter);
@@ -281,9 +284,7 @@ for (let x of categoryItems) {
   priceContainer.appendChild(priceCurency);
   let courseAButton = document.createElement("a");
   courseAButton.setAttribute("href", "#contact");
-  // 
   courseAButton.setAttribute("class", "buy-now");
-  // 
   let courseAButtonText = document.createTextNode("Buy");
   courseAButton.appendChild(courseAButtonText);
   categoryInfo.appendChild(priceContainer);
@@ -296,11 +297,9 @@ for (let x of categoryItems) {
 
 const filterList = document.querySelectorAll(".filter-list");
 const filterItems = document.querySelectorAll(".category-info-box");
-
 var temp = filterList[0];
 for (let list of filterList) {
   list.addEventListener('click', () => {
-
     if (list.dataset.filter == 'all') {
       temp.classList.remove("filter-list-active");
       list.classList.add("filter-list-active");
@@ -343,19 +342,15 @@ for (let list of filterList) {
 }
 
 // Discount
-
 const countDiscountTimer = new Date("Feb 31, 2022 11:38:59").getTime();
 const currentDate = new Date().getTime();
-
 const discountTimer = () => {
-
   const currentDate = new Date().getTime();
   const gap = countDiscountTimer - currentDate;
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
   const day = hour * 24;
-
   const daysLeft = Math.floor(gap / day);
   const hoursLeft = Math.floor((gap % day) / hour);
   const minutesLeft = Math.floor((gap % hour) / minute);
@@ -370,7 +365,6 @@ const discountTimer = () => {
     }
   }
 };
-
 if (currentDate < countDiscountTimer) {
   var discountBar = document.getElementById("sale");
   let discountContentText = document.createElement("p");
@@ -389,21 +383,17 @@ if (currentDate < countDiscountTimer) {
   var discountInterval = setInterval(discountTimer, 1000);
 }
 
-// Footer
-
+// Footer links
 let footerSocialLinks = ["https://www.facebook.com", "https://www.instagram.com", "https://www.linkedin.com"];
 let footerSocialIcons = ["fab fa-facebook-square", "fab fa-instagram-square", "fab fa-linkedin"];
 let footerLinks = ["robots.txt", "rss.xml", "sitemap.xml", "/assets/doc/nikolatimotic-documentation.pdf"];
 let footerLinksName = ["Robots", "RSS", "Sitemap", "Documentation"];
 
-// footer-wrapper
+// Footer
 let footerWrapper = document.createElement("div");
 footerWrapper.setAttribute("class", "wrapper");
-
-//footer-up
 let footerUp = document.createElement("div");
 footerUp.setAttribute("id", "footer-up");
-// footer-social
 let footerSocial = document.createElement("div");
 footerSocial.setAttribute("id", "footer-social");
 let footerSocialP = document.createElement("p");
@@ -411,9 +401,6 @@ let footerSocialPContent = document.createTextNode("Social");
 footerSocialP.appendChild(footerSocialPContent);
 footerSocial.appendChild(footerSocialP);
 let footerSocialUl = document.createElement("ul");
-
-// test
-
 for (const number in footerSocialLinks) {
   let footerSocialLiTemp = document.createElement("li");
   let footerSocialLiATemp = document.createElement("a");
@@ -426,8 +413,6 @@ for (const number in footerSocialLinks) {
 }
 footerSocial.appendChild(footerSocialUl);
 footerUp.appendChild(footerSocial);
-
-// footer-navigation
 let footerNavigation = document.createElement("div");
 footerNavigation.setAttribute("id", "footer-navigation");
 let footerNavigationP = document.createElement("p");
@@ -435,52 +420,25 @@ let footerNavigationPContent = document.createTextNode("Navigation");
 footerNavigationP.appendChild(footerNavigationPContent);
 footerNavigation.appendChild(footerNavigationP);
 let footerNavigationUl = document.createElement("ul");
-for (const number in navLinks) {
-  let footerNavigationLiTemp = document.createElement("li");
-  let footerNavigationLiATemp = document.createElement("a");
-  footerNavigationLiATemp.setAttribute("href", navLinks[number]);
-  if (number == 4) {
-    footerNavigationLiATemp.setAttribute("class", "about-me-link");
-  }
-  let footerNavigationLiATempContent = document.createTextNode(navNames[number]);
-  footerNavigationLiATemp.appendChild(footerNavigationLiATempContent);
-  footerNavigationLiTemp.appendChild(footerNavigationLiATemp);
-  footerNavigationUl.appendChild(footerNavigationLiTemp);
-}
-
+createLinks(navLinks, navNames, footerNavigationUl);
 footerNavigation.appendChild(footerNavigationUl);
 footerUp.appendChild(footerNavigation);
 footerWrapper.appendChild(footerUp);
-
-// footer-links
-
 let footerLink = document.createElement("div");
 footerLink.setAttribute("id", "footer-link");
 let footerLinkP = document.createElement("p");
 let footerLinkPContent = document.createTextNode("Links");
 footerLinkP.appendChild(footerLinkPContent);
 footerLink.appendChild(footerLinkP);
-let footerUl = document.createElement("ul");
-for (const number in footerLinksName) {
-  let footerLinksLiTemp = document.createElement("li");
-  let footerLinksLiATemp = document.createElement("a");
-  footerLinksLiATemp.setAttribute("href", footerLinks[number]);
-  let footerLinksLiATempContent = document.createTextNode(footerLinksName[number]);
-  footerLinksLiATemp.appendChild(footerLinksLiATempContent);
-  footerLinksLiTemp.appendChild(footerLinksLiATemp);
-  footerUl.appendChild(footerLinksLiTemp);
-}
-footerLink.appendChild(footerUl);
+let footerLinkUl = document.createElement("ul");
+createLinks(footerLinks, footerLinksName, footerLinkUl);
+footerLink.appendChild(footerLinkUl);
 footerUp.appendChild(footerLink);
-
-// footer-down
 let footerDown = document.createElement("div");
 footerDown.setAttribute("id", "footer-down");
 let footerP = document.createElement("p");
 let footerPContent = document.createTextNode("© Copyright 2022");
 footerP.appendChild(footerPContent);
 footerDown.appendChild(footerP);
-
 footerWrapper.appendChild(footerDown);
-
 document.getElementById("footer").appendChild(footerWrapper);
