@@ -71,11 +71,6 @@ burger.addEventListener("click", () => {
   document.getElementById("navbar-container").classList.toggle("nav-active");
 });
 
-// Promeni
-// Ovaj isti kod mozes modifikovati i time ga koristiti i za footer navigaciju
-
-// dodati skrolovanje i active class za određenu poziciju na stranici
-
 // About me
 
 let aboutMeExit = document.getElementById("about-me-close");
@@ -91,18 +86,13 @@ function removeAboutMe() {
 var aboutMeModal = document.querySelectorAll(".about-me-link");
 aboutMeModal.forEach(item => item.addEventListener("click", () => {
   document.getElementById("about-me-container").style.display = "block";
+  console.log(1);
   if (aboutMeModalRemoved) {
     aboutMeModalRemoved = false;
     quoteGeneratorInterval = setInterval(quoteGenerator, 2000);
   }
 }));
-// aboutMeModal.addEventListener("click", () => {
-//   document.getElementById("about-me-container").style.display = "block";
-//   if (aboutMeModalRemoved) {
-//     aboutMeModalRemoved = false;
-//     quoteGeneratorInterval = setInterval(quoteGenerator, 2000);
-//   }
-// });
+
 // Quote list 
 var quoteList = [
   {
@@ -399,18 +389,98 @@ if (currentDate < countDiscountTimer) {
   var discountInterval = setInterval(discountTimer, 1000);
 }
 
-// Add event listener
+// Footer
 
-// var buyNow = document.querySelectorAll(".buy-now");
-// console.log(buyNow);
-// buyNow.addEventListener("click", () => {
-//   console.log(1);
-// });
+let footerSocialLinks = ["https://www.facebook.com", "https://www.instagram.com", "https://www.linkedin.com"];
+let footerSocialIcons = ["fab fa-facebook-square", "fab fa-instagram-square", "fab fa-linkedin"];
+let footerLinks = ["robots.txt", "rss.xml", "sitemap.xml", "/assets/doc/nikolatimotic-documentation.pdf"];
+let footerLinksName = ["Robots", "RSS", "Sitemap", "Documentation"];
 
-// for (let i = 0; i < buyNow.length; i++) {
-//   buyNow[i].addEventListener("click", function () {
-//     console.log(buyNow[i]);
-//   });
-// }
+// footer-wrapper
+let footerWrapper = document.createElement("div");
+footerWrapper.setAttribute("class", "wrapper");
 
-// Problem pravi "pointer-events:none;" 
+//footer-up
+let footerUp = document.createElement("div");
+footerUp.setAttribute("id", "footer-up");
+// footer-social
+let footerSocial = document.createElement("div");
+footerSocial.setAttribute("id", "footer-social");
+let footerSocialP = document.createElement("p");
+let footerSocialPContent = document.createTextNode("Social");
+footerSocialP.appendChild(footerSocialPContent);
+footerSocial.appendChild(footerSocialP);
+let footerSocialUl = document.createElement("ul");
+
+// test
+
+for (const number in footerSocialLinks) {
+  let footerSocialLiTemp = document.createElement("li");
+  let footerSocialLiATemp = document.createElement("a");
+  let footerSocialLiAITemp = document.createElement("i");
+  footerSocialLiATemp.setAttribute("href", footerSocialLinks[number]);
+  footerSocialLiAITemp.setAttribute("class", footerSocialIcons[number]);
+  footerSocialLiATemp.appendChild(footerSocialLiAITemp);
+  footerSocialLiTemp.appendChild(footerSocialLiATemp)
+  footerSocialUl.appendChild(footerSocialLiTemp);
+}
+footerSocial.appendChild(footerSocialUl);
+footerUp.appendChild(footerSocial);
+
+// footer-navigation
+let footerNavigation = document.createElement("div");
+footerNavigation.setAttribute("id", "footer-navigation");
+let footerNavigationP = document.createElement("p");
+let footerNavigationPContent = document.createTextNode("Navigation");
+footerNavigationP.appendChild(footerNavigationPContent);
+footerNavigation.appendChild(footerNavigationP);
+let footerNavigationUl = document.createElement("ul");
+for (const number in navLinks) {
+  let footerNavigationLiTemp = document.createElement("li");
+  let footerNavigationLiATemp = document.createElement("a");
+  footerNavigationLiATemp.setAttribute("href", navLinks[number]);
+  if (number == 4) {
+    footerNavigationLiATemp.setAttribute("class", "about-me-link");
+  }
+  let footerNavigationLiATempContent = document.createTextNode(navNames[number]);
+  footerNavigationLiATemp.appendChild(footerNavigationLiATempContent);
+  footerNavigationLiTemp.appendChild(footerNavigationLiATemp);
+  footerNavigationUl.appendChild(footerNavigationLiTemp);
+}
+
+footerNavigation.appendChild(footerNavigationUl);
+footerUp.appendChild(footerNavigation);
+footerWrapper.appendChild(footerUp);
+
+// footer-links
+
+let footerLink = document.createElement("div");
+footerLink.setAttribute("id", "footer-link");
+let footerLinkP = document.createElement("p");
+let footerLinkPContent = document.createTextNode("Links");
+footerLinkP.appendChild(footerLinkPContent);
+footerLink.appendChild(footerLinkP);
+let footerUl = document.createElement("ul");
+for (const number in footerLinksName) {
+  let footerLinksLiTemp = document.createElement("li");
+  let footerLinksLiATemp = document.createElement("a");
+  footerLinksLiATemp.setAttribute("href", footerLinks[number]);
+  let footerLinksLiATempContent = document.createTextNode(footerLinksName[number]);
+  footerLinksLiATemp.appendChild(footerLinksLiATempContent);
+  footerLinksLiTemp.appendChild(footerLinksLiATemp);
+  footerUl.appendChild(footerLinksLiTemp);
+}
+footerLink.appendChild(footerUl);
+footerUp.appendChild(footerLink);
+
+// footer-down
+let footerDown = document.createElement("div");
+footerDown.setAttribute("id", "footer-down");
+let footerP = document.createElement("p");
+let footerPContent = document.createTextNode("&copy; Copyright 2022");
+footerP.appendChild(footerPContent);
+footerDown.appendChild(footerP);
+
+footerWrapper.appendChild(footerDown);
+
+document.getElementById("footer").appendChild(footerWrapper);
