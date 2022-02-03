@@ -285,10 +285,11 @@ for (let x of categoryItems) {
   let courseAButton = document.createElement("a");
   courseAButton.setAttribute("href", "#contact");
   courseAButton.setAttribute("class", "buy-now");
+  categoryInfo.appendChild(courseAButton);
   let courseAButtonText = document.createTextNode("Buy");
   courseAButton.appendChild(courseAButtonText);
   categoryInfo.appendChild(priceContainer);
-  priceContainer.appendChild(courseAButton);
+  // priceContainer.appendChild(courseAButton);
   categoryInfoBox.appendChild(imgDiv);
   categoryInfoBox.appendChild(categoryInfo);
 }
