@@ -198,26 +198,26 @@ const categoryItems = [
   {
     dataFilter: 'web',
     itemName: "Web programming Basic",
-    itemDescription: "This is basic web programming course. On this course you will learn technologies like HTML, CSS, JS.",
+    itemDescription: "This is a basic web programming course. In this course, you will learn technologies like HTML, CSS, JS.",
     imgItem: 'assets/img/code.jpg',
     altItem: 'code',
-    itemPrice: '100'
+    itemPrice: '150'
   },
   {
     dataFilter: 'design',
     itemName: "Graphic Design Basic",
-    itemDescription: "This is basic graphic design course. On this course you will learn essential graphic design principles and basic in Photoshop and Illustrator.",
+    itemDescription: "This is a basic graphic design course. In this course, you will learn essential graphic design principles and basics in Photoshop and Illustrator.",
     imgItem: 'assets/img/graphic-design-desk.jpg',
     altItem: 'code2',
-    itemPrice: '150'
+    itemPrice: '110'
   },
   {
     dataFilter: 'video',
     itemName: "Video Production Basic",
-    itemDescription: "This is basic video production course. On this course you will learn essential video production principles and basic video editing in Premiere Pro.",
+    itemDescription: "This is a basic video production course. In this course, you will learn essential video production principles and basic video editing in Premiere Pro.",
     imgItem: 'assets/img/video-production-desk.jpg',
     altItem: 'code3',
-    itemPrice: '300'
+    itemPrice: '130'
   },
   {
     dataFilter: 'web',
@@ -225,7 +225,7 @@ const categoryItems = [
     itemDescription: "This is advanced web programming course. On this course you will learn advanced technologies like JS, Node.JS, MySQL.",
     imgItem: 'assets/img/web-developer-desktop-with-laptop.jpg',
     altItem: 'code2',
-    itemPrice: '150'
+    itemPrice: '350'
   },
   {
     dataFilter: 'design',
@@ -233,7 +233,7 @@ const categoryItems = [
     itemDescription: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero explicabo cum quibusdam ipsum eligendi ex.",
     imgItem: 'assets/img/graphic-designer-sketch-design-logo.jpg',
     altItem: 'code2',
-    itemPrice: '150'
+    itemPrice: '270'
   },
   {
     dataFilter: 'video',
@@ -241,7 +241,7 @@ const categoryItems = [
     itemDescription: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero explicabo cum quibusdam ipsum eligendi ex.",
     imgItem: 'assets/img/laptop-showing-typesetting-software-graphic-designer-workspace.jpg',
     altItem: 'code2',
-    itemPrice: '150'
+    itemPrice: '290'
   }
 ];
 
