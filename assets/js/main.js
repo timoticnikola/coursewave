@@ -200,7 +200,7 @@ const categoryItems = [
     itemName: "Web programming Basic",
     itemDescription: "This is a basic web programming course. In this course, you will learn technologies like HTML, CSS, JS.",
     imgItem: 'assets/img/code.jpg',
-    altItem: 'code',
+    altItem: 'programming language code on the screen',
     itemPrice: '150'
   },
   {
@@ -208,7 +208,7 @@ const categoryItems = [
     itemName: "Graphic Design Basic",
     itemDescription: "This is a basic graphic design course. In this course, you will learn essential graphic design principles and basics in Photoshop and Illustrator.",
     imgItem: 'assets/img/graphic-design-desk.jpg',
-    altItem: 'code2',
+    altItem: 'graphic designer pc setup with camera',
     itemPrice: '110'
   },
   {
@@ -216,7 +216,7 @@ const categoryItems = [
     itemName: "Video Production Basic",
     itemDescription: "This is a basic video production course. In this course, you will learn essential video production principles and basic video editing in Premiere Pro.",
     imgItem: 'assets/img/video-production-desk.jpg',
-    altItem: 'code3',
+    altItem: 'video production setup with recording',
     itemPrice: '130'
   },
   {
@@ -224,7 +224,7 @@ const categoryItems = [
     itemName: "Web programming Advance",
     itemDescription: "This is an advanced web programming course. In this course, you will learn advanced technologies like JS, Node.JS, MySQL.",
     imgItem: 'assets/img/web-developer-desktop-with-laptop.jpg',
-    altItem: 'code2',
+    altItem: 'web developer setup with laptop',
     itemPrice: '350'
   },
   {
@@ -232,7 +232,7 @@ const categoryItems = [
     itemName: "Graphic Design Advanced",
     itemDescription: "This is an advanced graphic design course. In this course, you will learn advanced using programs like Adobe XD, After Effects, and Figma.",
     imgItem: 'assets/img/graphic-designer-sketch-design-logo.jpg',
-    altItem: 'code2',
+    altItem: 'sketching logo on paper with a pen',
     itemPrice: '270'
   },
   {
@@ -240,7 +240,7 @@ const categoryItems = [
     itemName: "Video Production Advanced",
     itemDescription: "This is an advanced video production course. In this course, you will learn advanced using programs like Animate, After Effects, and movie-making tricks.",
     imgItem: 'assets/img/laptop-showing-typesetting-software-graphic-designer-workspace.jpg',
-    altItem: 'code2',
+    altItem: 'laptop with editing software and graphic table',
     itemPrice: '290'
   }
 ];
