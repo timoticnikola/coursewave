@@ -222,7 +222,7 @@ const categoryItems = [
   {
     dataFilter: 'web',
     itemName: "Web programming Advance",
-    itemDescription: "This is advanced web programming course. On this course you will learn advanced technologies like JS, Node.JS, MySQL.",
+    itemDescription: "This is an advanced web programming course. In this course, you will learn advanced technologies like JS, Node.JS, MySQL.",
     imgItem: 'assets/img/web-developer-desktop-with-laptop.jpg',
     altItem: 'code2',
     itemPrice: '350'
@@ -230,7 +230,7 @@ const categoryItems = [
   {
     dataFilter: 'design',
     itemName: "Graphic Design Advanced",
-    itemDescription: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero explicabo cum quibusdam ipsum eligendi ex.",
+    itemDescription: "This is an advanced graphic design course. In this course, you will learn advanced using programs like Adobe XD, After Effects, and Figma.",
     imgItem: 'assets/img/graphic-designer-sketch-design-logo.jpg',
     altItem: 'code2',
     itemPrice: '270'
@@ -238,7 +238,7 @@ const categoryItems = [
   {
     dataFilter: 'video',
     itemName: "Video Production Advanced",
-    itemDescription: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero explicabo cum quibusdam ipsum eligendi ex.",
+    itemDescription: "This is an advanced video production course. In this course, you will learn advanced using programs like Animate, After Effects, and movie-making tricks.",
     imgItem: 'assets/img/laptop-showing-typesetting-software-graphic-designer-workspace.jpg',
     altItem: 'code2',
     itemPrice: '290'
