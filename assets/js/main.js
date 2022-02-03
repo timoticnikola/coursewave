@@ -24,7 +24,8 @@ for (const number in navLinks) {
   let navATemp = document.createElement("a");
   navATemp.setAttribute("href", navLinks[number]);
   if (number == 4) {
-    navATemp.setAttribute("id", "about-me-link");
+    navATemp.setAttribute("class", "about-me-link");
+    // navATemp.setAttribute("id", "about-me-link");
   }
   let navATempContent = document.createTextNode(navNames[number]);
   navATemp.appendChild(navATempContent);
@@ -86,14 +87,22 @@ function removeAboutMe() {
   aboutMeModalRemoved = true;
   clearInterval(quoteGeneratorInterval);
 }
-var aboutMeModal = document.getElementById("about-me-link");
-aboutMeModal.addEventListener("click", () => {
+// var aboutMeModal = document.getElementById("about-me-link");
+var aboutMeModal = document.querySelectorAll(".about-me-link");
+aboutMeModal.forEach(item => item.addEventListener("click", () => {
   document.getElementById("about-me-container").style.display = "block";
   if (aboutMeModalRemoved) {
     aboutMeModalRemoved = false;
     quoteGeneratorInterval = setInterval(quoteGenerator, 2000);
   }
-});
+}));
+// aboutMeModal.addEventListener("click", () => {
+//   document.getElementById("about-me-container").style.display = "block";
+//   if (aboutMeModalRemoved) {
+//     aboutMeModalRemoved = false;
+//     quoteGeneratorInterval = setInterval(quoteGenerator, 2000);
+//   }
+// });
 // Quote list 
 var quoteList = [
   {
