@@ -477,7 +477,7 @@ footerUp.appendChild(footerLink);
 let footerDown = document.createElement("div");
 footerDown.setAttribute("id", "footer-down");
 let footerP = document.createElement("p");
-let footerPContent = document.createTextNode("&copy; Copyright 2022");
+let footerPContent = document.createTextNode("© Copyright 2022");
 footerP.appendChild(footerPContent);
 footerDown.appendChild(footerP);
 
