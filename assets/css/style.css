@@ -211,7 +211,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* padding: 50px 0 150px 0; */
   row-gap: 50px;
 }
 
@@ -278,17 +277,6 @@ img {
 .category-info-box:hover::after {
   transform: scaleY(1);
 }
-/* .category-info-box::before {
-  content: "";
-  height: 3px;
-  width: 100%;
-  background-color: var(--font-primary);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  transform: opacity 0.3s;
-} */
 
 .category-info-box .category-info-text {
   position: absolute;
@@ -322,13 +310,11 @@ img {
   width: 100%;
   text-align: center;
   padding: 20px;
-  /* pointer-events: all; */
 }
 .price-text {
   font-weight: 600;
   font-size: 1.4rem;
   display: block;
-  /* position: relative; */
 }
 .price-text::after {
   position: absolute;
@@ -448,7 +434,6 @@ img {
 
 #about-us {
   min-height: 100vh;
-  /* margin-top: 50px; */
   padding-top: 100px;
   background-image: url("../img/about-us-bg.svg");
   background-position: center;
@@ -476,18 +461,14 @@ img {
 }
 #about-us .wrapper #about-us-container {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
 }
 #about-us-left,
 #about-us-right {
-  /* min-height: 100vh; */
   width: 50%;
 }
 #about-us-left img {
   object-fit: cover;
-  /* border: 5px solid rebeccapurple; */
-  /* border-radius: 25px 10px 5029px 7px; */
   border-radius: 45% 55% 70% 30% / 37% 64% 36% 63%;
 }
 
@@ -517,12 +498,9 @@ img {
 #feature-container {
   display: flex;
   justify-content: space-between;
-  /* justify-content: center;
-  align-items: center; */
 }
 .feature-item {
   display: flex;
-  /* justify-content: center; */
   padding-top: 50px;
   align-items: center;
   flex-direction: column;
@@ -551,7 +529,6 @@ textarea {
 }
 
 #contact {
-  /* padding: 50px 0; */
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -794,7 +771,6 @@ textarea {
   background-color: #2a427c;
   max-height: 100vh;
   width: 80vw;
-  /* min-width: 60vw; */
   margin: 0 auto;
   display: flex;
   position: relative;
@@ -802,13 +778,9 @@ textarea {
 
 #about-me-right {
   padding: 20px 40px;
-  /* test */
-  /* position: relative; */
 }
 
 #about-me-left {
-  /* min-width: 300px; */
-  /* min-width: 20%; */
   min-width: 200px;
   background-color: #3a5cad;
 }
@@ -894,11 +866,6 @@ textarea {
   opacity: 0;
   animation: fade infinite 2s;
   color: rgb(160, 160, 160);
-  /* padding-top: 50px; */
-  /* test */
-  /* position: absolute;
-  bottom: 20px;
-  width: 90%; */
 }
 #quote {
   font-size: 1.2rem;
@@ -978,7 +945,6 @@ textarea {
     background-position: unset;
   }
   #header .wrapper {
-    /* flex-direction: column-reverse; */
     flex-direction: column;
   }
   #header #header-left,
