@@ -1,7 +1,4 @@
-/* Font */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
-
-/* Colors */
 :root {
   --primary: #0099ff;
   --primary-dark: #0087ff;
@@ -11,8 +8,6 @@
   --font-primary: #f2f2f2;
   --font-secondary: #505050;
 }
-
-/* CSS reset */
 *,
 *::before,
 *::after {
@@ -37,7 +32,6 @@ ul {
 img {
   max-width: 100%;
 }
-/* Styling */
 .wrapper {
   margin: 0 10vw;
 }
@@ -54,7 +48,6 @@ img {
   transition: 0.5s ease-in-out;
   background-color: rgb(17, 148, 17);
 }
-/* Navbar */
 #navbar {
   z-index: 5;
   background-color: var(--navbar-primary);
@@ -99,7 +92,6 @@ img {
 #nav-close::before {
   background-color: var(--font-secondary);
 }
-/* ArowTop */
 #arrow-container {
   position: fixed;
   bottom: 20px;
@@ -126,7 +118,6 @@ img {
 #arrow-container::before {
   transform: rotate(-45deg) translate(14px, 29px);
 }
-/* Header */
 #header {
   min-height: 100vh;
   background-image: url("../img/header-graphic.svg");
@@ -183,7 +174,6 @@ img {
   justify-content: center;
   align-items: center;
 }
-/* Category info */
 #category-list {
   display: flex;
   flex-wrap: wrap;
@@ -292,7 +282,6 @@ img {
   position: absolute;
   bottom: 60px;
 }
-/* Category filter */
 #courses {
   min-height: 100vh;
   background-image: url("../img/category-bg.svg");
@@ -391,7 +380,6 @@ img {
   transform: rotate(45deg) translate(-8px, -6px);
   opacity: 1;
 }
-/* About us */
 #about-us {
   min-height: 100vh;
   padding-top: 100px;
@@ -475,7 +463,6 @@ img {
 .feature-item p {
   color: rgb(54, 54, 54);
 }
-/* Contact */
 textarea {
   display: block;
 }
@@ -606,7 +593,6 @@ textarea {
   display: block;
   margin-top: 20px;
 }
-/* Sponsors */
 #logo-sponsors {
   padding: 35px 0;
   margin: 0 auto;
@@ -620,7 +606,6 @@ textarea {
   align-items: center;
   justify-content: center;
 }
-/* Map */
 #map {
   width: 100%;
   height: 300px;
@@ -631,7 +616,6 @@ textarea {
   height: 100%;
   width: 100%;
 }
-/* Footer */
 #footer {
   background-color: #2a427c;
   min-height: 20vh;
@@ -707,7 +691,6 @@ textarea {
 #footer-down p {
   color: gray;
 }
-/* About me */
 #about-me-container {
   position: absolute;
   top: 10vh;
@@ -801,7 +784,6 @@ textarea {
   font-size: 1.3rem;
   color: var(--font-primary);
 }
-/* Quotes */
 #quote-box {
   opacity: 0;
   animation: fade infinite 2s;
@@ -856,7 +838,6 @@ textarea {
     opacity: 1;
   }
 }
-/* Responsive */
 @media only screen and (max-width: 1205px) {
   #about-us-container {
     flex-direction: column-reverse;
@@ -930,14 +911,12 @@ textarea {
   .category-info-box {
     min-width: 250px;
   }
-  /* About us */
   #about-us {
     background-position: right;
   }
   #about-us-right p {
     padding: 20px 0 50px 20px;
   }
-  /* Contact */
   #contact {
     padding: 50px 0;
   }
@@ -958,7 +937,6 @@ textarea {
   .feature-item {
     width: 50%;
   }
-  /* About me */
   #about-me-container {
     left: 5vw;
   }
@@ -978,7 +956,6 @@ textarea {
   #quote {
     font-size: 1rem;
   }
-  /* Footer */
   #footer-up {
     flex-wrap: wrap;
   }

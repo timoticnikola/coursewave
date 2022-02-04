@@ -186,6 +186,9 @@ contactSubmit.addEventListener("click", () => {
   } else if (messageBox.value == "" || messageBox.value == null || messageBox.value.length == 0) {
     messageBox.nextElementSibling.innerHTML = "Message can't be empty!";
     messageBox.nextElementSibling.setAttribute("class", "bad-form-element");
+  } else if (messageBox.value != "" && messageBox.value != null && messageBox.value.length < 20) {
+    messageBox.nextElementSibling.innerHTML = "Message can't be smaller then 20 characters!";
+    messageBox.nextElementSibling.setAttribute("class", "bad-form-element");
   } else {
     messageBox.nextElementSibling.innerHTML = "";
     messageBox.nextElementSibling.setAttribute("class", "good-form-element");
@@ -289,7 +292,6 @@ for (let x of categoryItems) {
   let courseAButtonText = document.createTextNode("Buy");
   courseAButton.appendChild(courseAButtonText);
   categoryInfo.appendChild(priceContainer);
-  // priceContainer.appendChild(courseAButton);
   categoryInfoBox.appendChild(imgDiv);
   categoryInfoBox.appendChild(categoryInfo);
 }
