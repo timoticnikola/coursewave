@@ -411,7 +411,7 @@ if (currentDate < countDiscountTimer) {
 // Footer links
 let footerSocialLinks = ["https://www.facebook.com", "https://www.instagram.com", "https://www.linkedin.com"];
 let footerSocialIcons = ["fab fa-facebook-square", "fab fa-instagram-square", "fab fa-linkedin"];
-let footerLinks = ["robots.txt", "rss.xml", "sitemap.xml", "/assets/doc/nikolatimotic-documentation.pdf"];
+let footerLinks = ["robots.txt", "rss.xml", "sitemap.xml", "/coursewave/assets/doc/nikolatimotic-documentation.pdf"];
 let footerLinksName = ["Robots", "RSS", "Sitemap", "Documentation"];
 
 // Footer
