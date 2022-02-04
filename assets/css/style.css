@@ -584,6 +584,9 @@ textarea {
 #contact-right input[type="button"] {
   color: rgb(165, 165, 165);
 }
+#form-bottom label {
+  font-size: 1rem;
+}
 .bad-form-element {
   color: red;
   padding-top: 5px;

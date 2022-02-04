@@ -96,7 +96,6 @@ function removeAboutMe() {
 var aboutMeModal = document.querySelectorAll(".about-me-link");
 aboutMeModal.forEach(item => item.addEventListener("click", () => {
   document.getElementById("about-me-container").style.display = "block";
-  console.log(1);
   if (aboutMeModalRemoved) {
     aboutMeModalRemoved = false;
     quoteGeneratorInterval = setInterval(quoteGenerator, 2000);
@@ -150,16 +149,23 @@ function quoteGenerator() {
 
 // Contact form
 let contactSubmit = document.getElementById("contact-submit");
+let mailNotSent = true;
 contactSubmit.addEventListener("click", () => {
   let regularFullName = /^[A-ZČĆŽĐŠ][a-zćčžđš]{1,14}\s([A-ZČĆŽĐŠ][a-zćčžđš]{1,14})?\s?[A-ZČĆŽŠĐ][a-zćčžđš]{1,19}$/;
   let fullNameField = document.getElementById("fullName");
   let fullNameFieldValue = fullNameField.value;
+  let fullNameConfirm;
+  let mailConfirm;
+  let courseConfirm;
+  let messageConfirm;
   if (regularFullName.test(fullNameFieldValue)) {
     fullNameField.nextElementSibling.innerHTML = "";
     fullNameField.nextElementSibling.setAttribute("class", "good-form-element");
+    fullNameConfirm = true;
   } else {
     fullNameField.nextElementSibling.innerHTML = "Full Name is not as expected";
     fullNameField.nextElementSibling.setAttribute("class", "bad-form-element");
+    fullNameConfirm = false;
   }
   let regularMail = /^[a-zA-Z0-9]([a-z]|[0-9])+\.?-?_?([a-z]|[0-9])*\.?([a-z]|[0-9])*\@[a-z]{3,}\.([a-z]{2,4}\.)?([a-z]{2,4})$/g;
   let mailField = document.getElementById("email");
@@ -167,31 +173,47 @@ contactSubmit.addEventListener("click", () => {
   if (regularMail.test(mailFieldFieldValue)) {
     mailField.nextElementSibling.innerHTML = "";
     mailField.nextElementSibling.setAttribute("class", "good-form-element");
+    mailConfirm = true;
   } else {
     mailField.nextElementSibling.innerHTML = "E-mail is not as expected!";
     mailField.nextElementSibling.setAttribute("class", "bad-form-element");
+    mailConfirm = false;
   }
   let course = document.getElementById("courseChose");
   if (course.value == "blank") {
     course.nextElementSibling.innerHTML = "Chose your course!";
     course.nextElementSibling.setAttribute("class", "bad-form-element");
+    courseConfirm = false;
   } else {
     course.nextElementSibling.innerHTML = "";
     course.nextElementSibling.setAttribute("class", "good-form-element");
+    courseConfirm = true;
   }
   let messageBox = document.getElementById("message");
   if (messageBox.value.length > 450) {
     messageBox.nextElementSibling.innerHTML = "Message can't be longer than 450 characters!";
     messageBox.nextElementSibling.setAttribute("class", "bad-form-element");
+    messageConfirm = false;
   } else if (messageBox.value == "" || messageBox.value == null || messageBox.value.length == 0) {
     messageBox.nextElementSibling.innerHTML = "Message can't be empty!";
     messageBox.nextElementSibling.setAttribute("class", "bad-form-element");
+    messageConfirm = false;
   } else if (messageBox.value != "" && messageBox.value != null && messageBox.value.length < 20) {
     messageBox.nextElementSibling.innerHTML = "Message can't be smaller then 20 characters!";
     messageBox.nextElementSibling.setAttribute("class", "bad-form-element");
+    messageConfirm = false;
   } else {
     messageBox.nextElementSibling.innerHTML = "";
     messageBox.nextElementSibling.setAttribute("class", "good-form-element");
+    messageConfirm = true;
+  }
+  if (fullNameConfirm && mailConfirm && courseConfirm && messageConfirm && mailNotSent) {
+    // JQuery notification plugin
+    toastr.success("Mail sent!");
+    mailNotSent = false;
+  } else if (mailNotSent == false) {
+    // JQuery notification plugin
+    toastr.error("Mail already sent!");
   }
 });
 
